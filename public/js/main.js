@@ -2,14 +2,14 @@ $(document).ready(function() {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "movies/all",
+        url: "products/all",
         success: function(response){
             if(response.data.length > 0 ){
                 constructDOM(formObject(response.data));
             }
         }
      });
-     
+
      function  formObject(response) {
          let flags = [], categoryObject = [], length = response.length, i;
          for( i=0; i<length; i++) {

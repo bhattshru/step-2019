@@ -1,7 +1,7 @@
 (function(){
-  var movieName = window.location.href.split("#")[1];
+  var productName = window.location.href.split("#")[1];
   $.ajax({
-    url: "/movies/"+movieName,
+    url: "/products/"+productName,
     success: function(result) {
       console.log('success  : ' , result)
       let movie=result.data;

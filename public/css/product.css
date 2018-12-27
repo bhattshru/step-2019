@@ -91,23 +91,23 @@ footer .logo {
 
 /* ADD MOVIE PAGE */
 
-.add_movie_form {
+.add_product_form {
 	margin: 20px auto;
 	width: 500px;
 }
 
-.add_movie_form h2{
+.add_product_form h2{
 	font-size: 1.8rem;
 	text-align: center;
 	margin: 20px 0;
 	font-weight: normal;
 }
 
-.add_movie_form label{
+.add_product_form label{
   font-size: 0.9rem;
 }
 
-.add_movie_form input, .add_movie_form textarea, .add_movie_form select{
+.add_product_form input, .add_product_form textarea, .add_product_form select{
   display: block;
 	width: 100%;
 	background: #442D4B;
@@ -120,29 +120,29 @@ footer .logo {
 	box-sizing: border-box;
 }
 
-.add_movie_form input{
+.add_product_form input{
 	height: 40px;
 }
 
-.add_movie_form textarea {
+.add_product_form textarea {
     resize: none;
 }
 
-.add_movie_form .divide {
+.add_product_form .divide {
 	display: inline-block;
 	width: 50%;
 	padding-left: 10px;
 	box-sizing: border-box;
 }
-.add_movie_form .divide:first-child {
+.add_product_form .divide:first-child {
     padding-right: 10px;
 		padding-left: 0;
 }
 
-.add_movie_form select::-ms-expand {
+.add_product_form select::-ms-expand {
     display: none;
 }
-.add_movie_form select{
+.add_product_form select{
 	border-radius: 0;
 	outline : none;
   overflow : hidden;
@@ -157,7 +157,7 @@ footer .logo {
 	        appearance: none;
 }
 
-.add_movie_form button {
+.add_product_form button {
 	margin: 0 auto;
 	display: block;
 	height: 40px;
