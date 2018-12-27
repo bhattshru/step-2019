@@ -1,12 +1,12 @@
 var dbService= require("../services/dbService"),
 STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
 
- exports.getAllMovies = function(req, res, next) {
+ exports.getAllProducts = function(req, res, next) {
    try {
      // Get the documents collection
      var db=dbService.database;
-     var moviesCollection = db.collection("movies");
-     moviesCollection.find().toArray().then(result=>{
+     var productsCollection = db.collection("products");
+     productsCollection.find().toArray().then(result=>{
              res.json({
                isSuccess: true,
                data: result
@@ -26,22 +26,23 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
    }
  };
 
- exports.addNewMovie = function(req, res, next) {
+ exports.addNewProduct = function(req, res, next) {
    try {
-      var movie = req.body;
-      if (!movie.name || !movie.releaseYear || !movie.language ||
-          !movie.rating || isNaN(movie.releaseYear) || !movie.thumbnailUrl ||
-          !movie.posterUrl || !movie.plot || !movie.cast || isNaN(movie.rating)) {
+      var product = req.body;
+      //add new conditions for product
+      if (!product.name || !product.imageUrl || !product.brand ||
+          !product.rating || !product.color ||
+          !product.size || !product.category || !product.description ||  !product.price ) {
           res.json({
             isSuccess: false,
             error: STATUS_CODE.INSUFFICIENT_PARAMS
           });
         } else {
           var db=dbService.database;
-          console.log(movie);
-          var moviesCollection = db.collection("movies");
+          console.log(product);
+          var productsCollection = db.collection("products");
 
-          moviesCollection.insert(movie).then(save_data=>{
+          productsCollection.insert(product).then(save_data=>{
             return res.json({
               "isSuccess": true
             });
@@ -60,12 +61,12 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
       }
   };
 
-  exports.getMovieDetails = function(req, res, next) {
+  exports.getProductDetails = function(req, res, next) {
     try {
-      console.log(req.params.movieName);
+      console.log(req.params.productName);
       var db=dbService.database;
-      var moviesCollection = db.collection("movies");
-      moviesCollection.find({ name: req.params.movieName }).toArray().then(result=>{
+      var productsCollection = db.collection("products");
+      productsCollection.find({ name: req.params.productName }).toArray().then(result=>{
         if (result.length > 0) {
           res.json({
             isSuccess: true,
@@ -74,7 +75,7 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
         } else {
           res.json({
             isSuccess: false,
-            error: STATUS_CODE.MOVIE_NOT_FOUND
+            error: STATUS_CODE.PRODUCT_NOT_FOUND
           });
         }
       }).catch(err=>{
