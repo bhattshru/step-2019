@@ -94,7 +94,7 @@ footer .logo {
   margin-right: 40px;
 }
 
-/* ADD MOVIE PAGE */
+/* ADD PRODUCT PAGE */
 
 .add_product_form {
   margin: 20px auto;
@@ -265,7 +265,7 @@ section {
   background-image: url("../images/star-empty.png");
 }
 
-/*MOVIE DETAIL CSS*/
+/*PRODUCT DETAIL CSS*/
 
 .product-description {
   padding: 0;
@@ -276,7 +276,7 @@ section {
 }
 
 .goBackLink {
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
   font-size: 1.5rem;
   vertical-align: super;
@@ -287,18 +287,107 @@ section {
   margin-right: 5px;
 }
 
-#movie-title {
+#brand-title {
+  font-size: 3rem;
+  color: #4A4A4A;
+}
+
+#product-title {
   font-size: 5rem;
+  font-weight: 600;
+}
+
+.product-price {
+  color: #000;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.product-img {
+  height: 600px;
+  margin: 10px 0px;
+  width: 45%;
+  border: 1px solid #333;
+  background-image: url("https://rukminim1.flixcart.com/image/880/1056/jm573ww0/lehenga-choli/4/w/n/free-mdl19-define-jewellery-original-imaf948fythg85yp.jpeg?q=50");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 45% 90%;
+  float: left;
+}
+
+.product-details {
+  width: 55%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.prod-def-attributes {
+  margin: 20px auto;
+}
+
+.prod-size, .prod-color, .prod-deliver {
+  font-weight: 600;
+  margin: 5px auto;
+}
+
+#prod-size, #prod-color, #prod-deliver {
+  color: #000;
+  font-weight: 600;
+}
+
+.prod-deliver {
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  margin: 30px auto;
+}
+
+.prod-btn {
+  padding: 15px 30px;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  border: none;
+  background-color: #581845;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.buy-now-btn {
+  border: 1px solid #581845;
+  background-color: #fff;
+  color: #581845;
+}
+
+.cart-btn-container, .buy-btn-container {
+  float: left;
+}
+
+#product-desc-text {
+  margin-top: 20px;
 }
 
 .stars .star {
   width: 20px;
   height: 20px;
-  margin: 10px auto;
+  margin-top: 20px;
   display: inline-block;
   background-position: center;
   background-size: contain;
+}
+
+.star{
+  margin: 0;
+}
+
+.reviews-ratings-text {
+  font-weight: 600;
+  margin-left: 20px;
 }
 
 .star-full {
@@ -313,7 +402,7 @@ section {
   background-image: url("../images/star-empty.png");
 }
 
-.product-img {
+/* .product-img {
   height: 600px;
   margin: 10px 0px;
   background-image: url("../images/movie.jpeg");
@@ -321,13 +410,7 @@ section {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-
-#movie-type {
-  margin: 50px;
-  font-size: 2.2rem;
-  text-transform: capitalize;
-}
+} */
 
 .product-desc {
   display: flex;

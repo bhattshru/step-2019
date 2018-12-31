@@ -35,9 +35,9 @@ exports.STATUS_CODE = {
         STATUS : "Bad request",
         MESSAGE : "Insufficient parameters"
     },
-    MOVIE_NOT_FOUND : {
+    PRODUCT_NOT_FOUND : {
         CODE : 401,
         STATUS : "Not found",
-        MESSAGE : "No such movie found. Please check again"
+        MESSAGE : "No such product found. Please check again"
     }
 };

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Movie Detail</title>
-  <meta name="description" content="book movie tickets">
+  <title>Product Details</title>
+  <meta name="description" content="buy dress products">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Place favicon.ico in the root directory -->
@@ -21,51 +21,57 @@
     <img class="fleft logo" src="./images/logo.png" alt="logo" />
     <ul class="fright">
       <li><a href="/">HOME</a></li>
-      <li><a href="/addMovie.html">ADD MOVIE</a></li>
+      <li><a href="/addProduct.html">ADD PRODUCT</a></li>
     </ul>
   </header>
   <div class="clearfix"></div>
 
-  <section class=" movie-description">
+  <section class="product-description">
     <div class="content">
-      <img src="./images/arrow.png" id="goBackImg" alt="img" />
-      <a href="/" class="goBackLink">All Movies</a>
-      <p id="movie-title">INTERSTELLAR</p>
-      <div class="stars">
-        <div class="star star-full"></div>
-        <div class="star star-full"></div>
-        <div class="star star-full"></div>
-        <div class="star star-half"></div>
-        <div class="star star-empty"></div>
+      <div class="breadcrumbs">
+        <img src="./images/arrow.png" id="goBackImg" alt="img" />
+        <a href="/" class="goBackLink">All Products</a>
       </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="movie-img">
-      <!-- <img src="./images/movie.jpeg" alt="movie imag"/> -->
-    </div>
-    <h1 id="movie-type">2014 English </h1>
-
-    <div class="movie-desc content">
-
-      <div class="detail-block  ">
-        <span>PLOT</span>
-        <p class="plot-block">
-          In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home
-          via a wormhole. But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through the wormhole and across the galaxy to find out which of three planets could be mankind's new home.through the wormhole
-          and across the galaxy to find out which of three planets could be mankind's new home.
-        </p>
-      </div>
-      <div class="detail-block">
-        <span>CAST</span>
-        <ul class="cast-list">
-          <li>Mathew McCaughny</li>
-          <li>Anne Hathaway</li>
-          <li>Jessica Chastain</li>
-          <li>Michael Caine</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+      <div class="product-container">
+        <div class="product-img">
+        </div>
+        <div class="product-details">
+          <p id="brand-title">Saara</p>
+          <p id="product-title">Pink Blue Lehenga</p>
+          <p class="product-price">Rs. <span id="product-price">370</span></p>
+          
+          <div class="stars">
+              <div class="star star-full"></div>
+              <div class="star star-full"></div>
+              <div class="star star-full"></div>
+              <div class="star star-half"></div>
+              <div class="star star-empty"></div>
+              <span class="reviews-ratings-text">200 reviews and 45 ratings</span>
+              <div class="clearfix"></div>
+          </div>
+          <div id="product-desc-text">This is a blue and pink lehenga with 3/4th sleeve and round neck, suitable for women under 5.5 feet</div>
+          <div class="prod-def-attributes">
+            <div class="prod-size">Size: <span id="prod-size">Free</span></div>
+            <div class="prod-color">Color: <span id="prod-color">Blue</span></div>
+          </div>
+          <div class="btn-container">
+            <div class="cart-btn-container">
+              <button class="prod-btn add-to-cart-btn">Add to cart</button>
+            </div>
+            <div class="buy-btn-container">
+              <button class="prod-btn buy-now-btn">buy now</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+          <div class="prod-deliver">Deliver to: <span id="prod-deliver">600098</span></div>
+          <p class="bank-offer">Bank Offer: 5% Instant Discount on EMIs with Axis Bank Credit Card</p>
+          <p class="bank-offer">Bank Offer: Extra 5% off* with Axis Bank Buzz Credit Card</p>
+         </div>
+      </div>        
+   </div>
+<div class="clearfix"></div>
+</section>
+  
   <footer class="clearfix">
     <img class="fright logo" width="200" src="./images/logo.png" alt="logo" />
     <div class="link-grp fleft ">
