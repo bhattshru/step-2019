@@ -13,13 +13,13 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
              });
      }).catch(err=>{
        console.log(err);
-       res.json({
+       res.status(500).json({
          isSuccess: false,
          error: STATUS_CODE.DB_ERROR
        });
      });
    } catch (err) {
-     res.json({
+     res.status(400).json({
        isSuccess: false,
        error: STATUS_CODE.SERVER_ERROR
      });
@@ -33,7 +33,7 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
       if (!product.name || !product.imageUrl || !product.brand ||
           !product.rating || !product.color ||
           !product.size || !product.category || !product.description ||  !product.price ) {
-          res.json({
+          res.status(400).json({
             isSuccess: false,
             error: STATUS_CODE.INSUFFICIENT_PARAMS
           });
@@ -43,18 +43,23 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
           var productsCollection = db.collection("products");
 
           productsCollection.insert(product).then(save_data=>{
+            console.log('isSuccess',save_data)
             return res.json({
               "isSuccess": true
             });
           }).catch(err=>{
-            return res.json({
+            console.log('isnotSuccess DB_ERROR',err)
+
+            return res.status(500).json({
               isSuccess: false,
               error: STATUS_CODE.DB_ERROR
             });
           });
         }
       } catch (err) {
-        res.json({
+        console.log('isnotSuccess SERVER_ERROR',err)
+
+        res.status(500).json({
           isSuccess: false,
           error: STATUS_CODE.SERVER_ERROR
         });
@@ -73,20 +78,20 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
             data: result[0]
           });
         } else {
-          res.json({
+          res.status(400).json({
             isSuccess: false,
             error: STATUS_CODE.PRODUCT_NOT_FOUND
           });
         }
       }).catch(err=>{
         console.log(err);
-        res.json({
+        res.status(500).json({
           isSuccess: false,
           error: STATUS_CODE.DB_ERROR
         });
       });
     } catch (err) {
-      res.json({
+      res.status(500).json({
         isSuccess: false,
         error: STATUS_CODE.SERVER_ERROR
       });

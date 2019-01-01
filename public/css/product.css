@@ -175,12 +175,14 @@ footer .logo {
   border: none;
   font-size: .9rem;
   border-radius: 0;
+  cursor: pointer;
 }
-.add_product_form label{
-  font-weight:bold;
-  font-size:1rem;
 
+.add_product_form label {
+  font-weight: bold;
+  font-size: 1rem;
 }
+
 /* HOMEPAGE CSS */
 
 section {
@@ -277,31 +279,36 @@ section {
 }
 
 .goBackLink {
-  color: #000;
+  color: #581845;
   text-decoration: none;
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
   vertical-align: super;
 }
 
 #goBackImg {
+  vertical-align: middle;
   width: 30px;
   margin-right: 5px;
 }
 
 #brand-title {
-  font-size: 3rem;
+  font-size: 35px;
   color: #4A4A4A;
+  font-weight: 600;
 }
 
 #product-title {
-  font-size: 5rem;
+  font-size: 70px;
   font-weight: 600;
 }
 
 .product-price {
   color: #000;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 45px;
+  margin-top: 40px;
 }
 
 .product-img {
@@ -333,7 +340,11 @@ section {
 
 #prod-size, #prod-color, #prod-deliver {
   color: #000;
-  font-weight: 600;
+  font-weight: bold;
+}
+
+#prod-color {
+  text-transform: capitalize;
 }
 
 .prod-deliver {
@@ -370,6 +381,8 @@ section {
 
 #product-desc-text {
   margin-top: 20px;
+  font-size: 16px;
+  color: #000;
 }
 
 .stars-pdp .star {
@@ -381,7 +394,7 @@ section {
   background-size: contain;
 }
 
-.star{
+.star {
   margin: 0;
 }
 
@@ -435,16 +448,6 @@ section {
   background-image: url("../images/star-empty.png");
 }
 
-/* .product-img {
-  height: 600px;
-  margin: 10px 0px;
-  background-image: url("../images/movie.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-} */
-
 .product-desc {
   display: flex;
 }
@@ -462,10 +465,6 @@ section {
 .detail-block span {
   color: #f7e51e;
   font-size: 1.6rem;
-}
-
-.detail-block .plot-block {
-  text-align: justify;
 }
 
 .detail-block ul, p {

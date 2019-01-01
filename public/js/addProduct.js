@@ -10,8 +10,11 @@ function addProduct() {
               }
 
             },
-            error :function(response) {
-               console.log("Error : "+ response);
+            error :function(err) {
+
+               console.log("Error : "+ JSON.parse(err.responseText).error);
+               alert(JSON.parse(err.responseText).error.MESSAGE);
+
             }
     });
 }

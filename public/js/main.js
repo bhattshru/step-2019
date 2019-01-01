@@ -10,7 +10,7 @@ $(document).ready(function() {
     },
     error: function(err) {
       constructDOM(formObject(err));
-
+      alert(JSON.parse(err.responseText).error.MESSAGE);
     }
   });
 
