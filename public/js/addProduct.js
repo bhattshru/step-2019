@@ -1,4 +1,4 @@
-function addMovie() {
+function addProduct() {
     $.ajax({
             url: "/products/add",
             type: 'post',

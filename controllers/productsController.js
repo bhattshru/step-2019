@@ -63,10 +63,10 @@ STATUS_CODE = require("../constants/statusCodes").STATUS_CODE;
 
   exports.getProductDetails = function(req, res, next) {
     try {
-      console.log(req.params.productName);
+      console.log(decodeURIComponent(req.params.productName));
       var db=dbService.database;
       var productsCollection = db.collection("products");
-      productsCollection.find({ name: req.params.productName }).toArray().then(result=>{
+      productsCollection.find({ name: req.params.productName.trim() }).toArray().then(result=>{
         if (result.length > 0) {
           res.json({
             isSuccess: true,

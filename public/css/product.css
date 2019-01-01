@@ -197,6 +197,7 @@ section {
   font-size: 1.8rem;
   font-weight: 100;
   padding-top: 20px;
+  text-transform: capitalize;
   margin-bottom: 20px;
 }
 
@@ -308,7 +309,6 @@ section {
   margin: 10px 0px;
   width: 45%;
   border: 1px solid #333;
-  background-image: url("https://rukminim1.flixcart.com/image/880/1056/jm573ww0/lehenga-choli/4/w/n/free-mdl19-define-jewellery-original-imaf948fythg85yp.jpeg?q=50");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 45% 90%;
@@ -372,7 +372,7 @@ section {
   margin-top: 20px;
 }
 
-.stars .star {
+.stars-pdp .star {
   width: 20px;
   height: 20px;
   margin-top: 20px;
@@ -400,7 +400,7 @@ section {
 
 .review-wrapper {
   border-bottom: 1px solid #000;
-  padding: 10px 0; 
+  padding: 10px 0;
 }
 
 .review-wrapper:last-child {
