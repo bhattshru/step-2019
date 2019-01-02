@@ -1,6 +1,6 @@
-# step-projector-app
+# step-product-app
 
-For ProjectorServer
+For ProductServer
 
 The quickest way to get started with express is to utilize the express generator
 
