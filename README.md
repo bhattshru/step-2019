@@ -41,3 +41,6 @@ exports.STATUS_CODE = {
         MESSAGE : "No such product found. Please check again"
     }
 };
+
+
+myJSON link: https://api.myjson.com/bins/1d47ac
